@@ -1,0 +1,20 @@
+%h1= t('.title')
+%p= link_to t('.new_translation'), new_translation_path
+
+%table
+  %thead
+    %tr
+      %th= Translation.human_attribute_name :text
+      %th= Translation.human_attribute_name :language_from_id
+      %th= Translation.human_attribute_name :language_to_id
+      %th{:colspan => 3}= t 'actions'
+  
+  %tbody
+    - for translation in @translations
+      %tr{ :class => cycle(:odd, :even) }
+        %td= translation.text
+        %td= translation.language_from_id
+        %td= translation.language_to_id
+        %td.action= link_to t('show'), translation
+        %td.action= link_to t('edit'), edit_translation_path(translation)
+        %td.action= link_to t('destroy'), translation, :confirm => t('are_you_sure'), :method => :delete

@@ -1,0 +1,17 @@
+%html
+  %head
+    %title ShareT - Simple Online Translations, Share Translation with Friends
+    = stylesheet_link_tag 'jquery-ui-1.8.2.custom', 'application'
+    = javascript_include_tag 'jquery-1.4.2.min', 'jquery-ui-1.8.2.custom.min', 'jquery.rails', :cache => :all
+    = csrf_meta_tag
+  %body
+    #root
+      #header
+        #nav_container
+          = render :partial => '/shared/header'
+      #content
+        = flash_messages
+        = yield
+      #root_footer
+    #footer
+      = render :partial => '/shared/footer'

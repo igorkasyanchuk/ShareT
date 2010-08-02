@@ -1,0 +1,12 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), translations_path
+  = link_to t('edit'), edit_translation_path(@translation)
+
+%dl
+  %dt Name
+  %dd= @translation.text
+  %dt= Translation.human_attribute_name :language_from_id
+  %dd Language from
+  %dt= Translation.human_attribute_name :language_to_id
+  %dd Language to

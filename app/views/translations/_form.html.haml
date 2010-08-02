@@ -1,0 +1,18 @@
+= form_for(@translation) do |f|
+  = error_messages_for :translation
+  
+  .field
+    = f.label :text
+    %br
+    = f.text_area :text
+  .field
+    = f.label :language_from_id
+    %br
+    = f.text_field :language_from_id
+  .field
+    = f.label :language_to_id
+    %br
+    = f.text_field :language_to_id
+
+  .actions
+    = f.submit

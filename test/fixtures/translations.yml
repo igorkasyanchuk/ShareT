@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  text: MyText
+  language_from_id: 1
+  language_to_id: 1
+
+two:
+  text: MyText
+  language_from_id: 1
+  language_to_id: 1
